@@ -38,7 +38,7 @@ function Main() {
               {albumLists.map((user) => (
                     <div key={user.playcount} className="card rounded-3 mb-4">
                      
-                      <div onClick={ArtistDetailPage} data-name={user.name} data-url={user.image[2]["#text"]} className="card-body p-4">
+                      <div style= {{"cursor":"crosshair"}}  onClick={ArtistDetailPage} data-name={user.name} data-url={user.image[2]["#text"]} className="card-body p-4">
                         
                         <div className="row d-flex justify-content-between align-items-center">
                           <div className="col-md-2 col-lg-2 col-xl-2">

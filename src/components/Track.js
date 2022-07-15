@@ -20,21 +20,22 @@ export class ArtistDetail extends Component {
                   <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
                       <img
-                        className="img-fluid rounded-3"
+                        className="img-fluid rounded-3" style= {{"cursor":"pointer"}} 
+                        onClick={()=> window.open(user["url"], "_blank")} 
                         src={user.image[2]["#text"]}
                         alt={user.image[2]["#text"]}
                       />
                     </div>
                     <div className="col-md-5 col-lg-5 col-xl-5 text-start">
-                      <p className="fw-normal mb-2"><b>Graduation</b></p>
+                      <p className="fw-normal mb-2"><b>{user.name}</b></p>
                       <p className="fw-normal mb-2">
-                        {user.name}
+                        {user.artist["name"]}
                       </p>
                     </div>
                     <div className="col-md-5 col-lg-5 col-xl-5 text-start">
                       <p>
-                        <span className="text-muted">listeners: </span>
-                        {user.listeners}
+                        <span>{user.listeners}</span>
+                        <span className="text-muted"> listeners</span>
                       </p>
                       <p>
                         <span>{user.playcount}</span>
